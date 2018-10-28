@@ -1,0 +1,93 @@
+\section{Life cycle of Academic Software} 
+\label{study3}
+
+The academic software projects featured in this study do not have typical life
+cycles of proprietary commercial software products.  Therefore, they are
+considered as free/libre/open source software projects and characterized with
+the life cycle model proposed by \cite{capiluppi2007adapting},
+adapted from \cite{rajlich2000staged}.
+
+We used the number of modules\footnote{the term \textit{module}
+refers to a unit that makes up a software system, such as ``classes'',
+``functions'' or ``source files''.} to define the evolution stage of academic
+software, and calculated it by using static analysis of source code.  Studies
+show that the number of modules in software has a tendency to stabilize over
+time and thus this measure can be used to characterize their stage of evolution
+\cite{capiluppi2007adapting}.
+
+We also take into account the types to classify academic software proposed by
+Howison \cite{howison2011scientific}. An academic software can be developed in
+a model of {\it software as supporting service} living outside the reputation
+economy of science or as a {\it software for academic credit}, having a strong
+association with the science ecosystem. The second type considers an academic
+software as {\it incidental software} written purely to facilitate research, or
+as {\it a parallel software practice} related to a situation facing many
+scientists who release software for others to use, or yet as {\it a software
+subfield} where publications about software are the primary contributions.
+
+\myparagraph{Scoping}
+%
+The goal of the study is to analyze the \textit{published static analysis
+software projects} with the purpose of \textit{characterizing them}, concerning
+their \textit{evolution stage}, from the perspective of \textit{end-user
+scientists and software developers}, in the context of their software
+ecosystems.
+
+In this study, we investigated the following research question regarding
+academic software for static analysis published at ASE and SCAM
+as well as its evolution stage of the life cycle:
+
+\newcommand{\StudyThreeQuestionOne}{
+	\textbf{(RQ2.1)} \textit{In which evolution stage of the software life cycle defined by
+Capiluppi's model \cite{capiluppi2007adapting}, are these academic software?}
+}
+
+\noindent \StudyThreeQuestionOne We investigate  which academic software
+projects of static analysis continue to evolve after its initial publication and 
+in which evolution stage they are.
+
+Measurements required in this study include:
+  (1) the number of releases of each project with information about its version and date;
+  (2) the number of releases with available source code for download; and
+  (3) the number of modules in the source code of each version/release.
+
+\myparagraph{Data Collection}
+%
+We collected data from the academic software project website, related
+publications and software repositories; we surveyed neither developers nor
+researchers. We present these data in Table \ref{life-cycle-table}.
+
+\input{documents/life-cycle-table.tex}
+
+We manually inspected the website of all projects looking for data about releases and versions, we manually downloaded each project release with source code available, and then we run the Analizo\footnote{\url{http://www.analizo.org}} on each project and each release to collect the number of modules. We just analyzed projects written in C, C++, C\#, and Java. We wrote a script\footnote{\url{https://github.com/joenio/dissertacao-ufba-2016/blob/master/bin/run-analizo}} to automate the Analizo execution on each project ant their releases.
+
+\myparagraph{Results and Analysis}
+%
+The implication on this study is:
+
+\paragraph{\bf Evolution stage of academic software}
+Regarding question \textbf{RQ2.1}, most of the \SoftwareCount \ academic
+software analyzed, 44 projects (73\%), are in initial development or closedown
+stage.  From the remaining 16 projects (27\%), 11 projects (22\%) are in
+evolution, servicing or phaseout stages, and for five projects (8\%) the stage
+could not be determined, as detailed in Table \ref{life-cycle-table}.
+%
+Academic software in \textit{initial development} (a first functioning version
+is released) share characteristics with incidental software
+\cite{howison2011scientific} (developed mainly to support research).  Academic
+software in \textit{evolution} (capabilities and functionality are extended to
+meet user needs) or \textit{servicing} (minor defect repairs and simple
+functional changes) share characteristics  with {\it parallel software
+practice} (developed and evolved to be used by other researchers). Besides, it
+as {\it software sub-field} (the software itself is considered a primary
+contribution to science).
+
+\myparagraph{Threats to validity}
+%
+We performed the analysis and the interpretation of results based only on the
+data collected from the academic software project website, related publications
+and software repositories; we surveyed neither developers nor researchers. This
+scenario can harm validity in case of outdated or incomplete documentation.
+However, our study was exploratory and aimed to draw a general picture of the
+domain of static analysis and not necessarily bring evidence on each of the
+projects individually.
